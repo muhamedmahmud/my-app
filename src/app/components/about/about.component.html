@@ -1,0 +1,73 @@
+<section id="about" class="about-section section-padding bg-light-custom">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary-custom">About Me</h2>
+        <p class="lead">Get to know more about my background and journey</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="about-content">
+          <h3 class="h2 mb-4">Bio</h3>
+          <p class="mb-4">
+            I'm a passionate Full Stack Developer with over 3 years of experience in creating 
+            innovative web solutions. I love turning complex problems into simple, beautiful, 
+            and intuitive designs.
+          </p>
+          <p class="mb-4">
+            My expertise spans across modern web technologies including Angular, React, Node.js, 
+            and cloud platforms. I'm always eager to learn new technologies and take on 
+            challenging projects that push the boundaries of what's possible.
+          </p>
+          <button class="btn btn-primary btn-primary-custom" (click)="downloadCV()">
+            <i class="fas fa-download me-2"></i>Download CV
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="education-experience">
+          <!-- Education Section -->
+          <div class="mb-5">
+            <h3 class="h4 mb-4 text-primary-custom">
+              <i class="fas fa-graduation-cap me-2"></i>Education
+            </h3>
+            <div class="timeline">
+              <div *ngFor="let edu of education" class="timeline-item mb-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary-custom">{{ edu.degree }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ edu.institution }}</h6>
+                    <p class="card-text text-muted mb-2">{{ edu.year }}</p>
+                    <p class="card-text">{{ edu.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Experience Section -->
+          <div>
+            <h3 class="h4 mb-4 text-primary-custom">
+              <i class="fas fa-briefcase me-2"></i>Experience
+            </h3>
+            <div class="timeline">
+              <div *ngFor="let exp of experiences" class="timeline-item mb-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary-custom">{{ exp.position }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ exp.company }}</h6>
+                    <p class="card-text text-muted mb-2">{{ exp.period }}</p>
+                    <p class="card-text">{{ exp.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<section id="skills" class="skills-section section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary-custom">Skills</h2>
+        <p class="lead">Technologies and tools I work with</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="skills-container">
+          <div *ngFor="let skill of skills" class="skill-item mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="skill-name mb-0">{{ skill.name }}</h5>
+              <span class="skill-percentage fw-bold text-primary-custom">{{ skill.level }}%</span>
+            </div>
+            <div class="progress">
+              <div 
+                class="progress-bar {{ skill.color }}" 
+                role="progressbar" 
+                [style.width.%]="skill.level"
+                [attr.aria-valuenow]="skill.level" 
+                aria-valuemin="0" 
+                aria-valuemax="100">
+                {{ skill.level }}%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional Skills Categories -->
+    <div class="row mt-5">
+      <div class="col-md-4 text-center mb-4">
+        <div class="skill-category">
+          <i class="fas fa-code fa-3x text-primary-custom mb-3"></i>
+          <h4>Frontend</h4>
+          <p class="text-muted">Angular, React, Vue.js, HTML5, CSS3, Bootstrap, Tailwind CSS</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="skill-category">
+          <i class="fas fa-server fa-3x text-primary-custom mb-3"></i>
+          <h4>Backend</h4>
+          <p class="text-muted">Node.js, Express.js, Python, PHP, RESTful APIs, GraphQL</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="skill-category">
+          <i class="fas fa-database fa-3x text-primary-custom mb-3"></i>
+          <h4>Database</h4>
+          <p class="text-muted">MongoDB, MySQL, PostgreSQL, Firebase, Redis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

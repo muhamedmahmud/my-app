@@ -1,0 +1,55 @@
+.about-section {
+  background-color: #f8f9fa;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 30px;
+  width: 2px;
+  height: calc(100% + 15px);
+  background-color: #dee2e6;
+}
+
+.card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.card:hover {
+  border-left-color: #007bff;
+  transform: translateX(5px);
+}
+
+.about-content {
+  padding-right: 2rem;
+}
+
+@media (max-width: 991px) {
+  .about-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item::before,
+  .timeline-item::after {
+    display: none;
+  }
+}

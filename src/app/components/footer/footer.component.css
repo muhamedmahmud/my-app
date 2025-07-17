@@ -1,0 +1,100 @@
+.footer-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ecf0f1;
+}
+
+.hover-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hover-link:hover {
+  color: #007bff !important;
+  padding-left: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.contact-info a:hover {
+  color: #007bff !important;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.text-primary-custom {
+  color: #007bff !important;
+}
+
+hr.border-secondary {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    text-align: center;
+  }
+  
+  .col-md-6.text-md-end {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+  
+  .social-link {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
